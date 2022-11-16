@@ -1,0 +1,483 @@
+@charset "utf-8";
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+  width: 100%;
+  height: 50%;
+  padding: 0px ;
+  background-image: url(imagens/represaigt.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 300px;
+  background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 170px;
+    background-color: white; 
+}
+
+header > div.container {
+    background-color: #3B538C ;
+    color: white;
+    padding: 10px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header > div.container > div > a.acess {
+    color: white;
+    padding: 5px;
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+div.logo {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 90px;
+}
+
+ #divbusca {
+    background-color: black;
+    border: solid 1px black;
+    border-radius:  20px;
+    font-size: 20px;
+    width: 300px;
+    height: 35px;
+    color: white;
+    padding: 5px;
+    margin: 0px 10px 0px 10px ;
+}
+
+ #txtbusca {
+    background-color: black;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: solid;
+    height: 40px;
+    width: 260px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div > a#diario {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 140px;
+    background-color: #1C3680;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center ;
+}
+
+ a.igarata {
+    display: flex;
+    padding: 30px;
+    margin: -10px 200px 1px 75px;
+    flex-direction: row;
+    justify-content: left; 
+}
+
+a.redes {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   padding: 10px;  
+}
+
+a.caixa {
+    color: #1C3680;
+}
+
+nav {
+    background-color: transparent;
+    margin: auto;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;  
+}
+
+nav.menu {
+    background-color: transparent;
+    padding: 20px;
+    margin: -10px 60px 10px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a.caixa {
+    color: #3B538C;
+ }
+
+ a:hover {
+   text-decoration: underline;
+   
+}
+
+div.submenu {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    margin: auto;
+    width: 700px; 
+}
+
+div.sub a {
+   color: white;
+}
+
+div.sub a:hover{
+   text-decoration: underline;
+}
+
+div.sub {
+     line-height: 60px;
+     align-items: center;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 500;
+     border: 10px solid transparent; 
+        
+}
+
+div.sub > li {
+    background-color: #178b6ad0;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+article.imagem {
+    width: 100%;
+    background-color: transparent;
+}
+
+article > img.img {
+    display: flex;  
+    padding: 10px;
+    margin: 170px auto 70px auto;
+    vertical-align: middle;
+}
+
+aside {
+    background-color: white;
+}
+
+aside > h1 {
+    text-align: left;
+    padding: 20px 10px 10px 60px;
+    margin: auto;
+    color: #3B79BC;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    font-weight: bolder;
+    font-weight: 800;
+}
+
+aside > h1 > strong {
+    color: #06BD89;
+}
+
+ p.texto {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #3B538C;
+  color: white;
+  padding: 10px;
+ 
+}
+
+aside > div.noticias {
+    display: flex;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+aside > div.noticias2 {
+    display: flex; 
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+aside > div.noticias :hover {
+    border: rgb(82, 79, 79) solid 5px;
+
+}
+
+aside > div.noticias2 :hover {
+    border: rgb(82, 79, 79) solid 5px;
+}
+
+section.turismo {
+    background-color: #3B538C ;
+}
+
+section > img.covid {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    margin: auto;
+}
+
+section > img.banner {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: auto;
+}
+
+ div.banner-img {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.banner123 {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+ div.foto {
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    margin: 10px 180px 40px 10px;
+    
+ }
+
+ p#galeria {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    margin-bottom: 40px;
+    border-radius: 5px ;
+    background-color: #06BD89;
+    border: 1px solid transparent;
+    width: 150px;
+ }
+
+ p#galeria a {
+   color: white;
+ }
+
+ div.secretarias {
+    display: flex;
+    justify-content: space-around;   
+ }
+
+ div.h1 {
+    background-color: white;
+    color: #3B538C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+ div.h1 a {
+   color: #3B538C;
+ }
+
+ div.h1 a:hover {
+   color: #3B538C;
+   text-decoration: none;
+ }
+
+ div.secvideo {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin: auto;
+ }
+
+ iframe {
+   border: 50px solid white;  
+ }
+
+strong {
+    color: #06BD89;
+ }
+
+ul {
+    display: block;
+    list-style-type: none;
+    columns: 2;
+    width: 800px; 
+ }
+
+ li {
+    line-height: 45px ;
+    border: 1px solid black;
+    padding: 10px;
+ }
+
+ li.tp {
+    justify-items: center;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 60px;
+ }
+
+ div > li.tp {
+    background-color: rgba(0, 128, 0, 0.805);
+    border: 10px solid white;
+    border-radius: 20px;
+    color: white ;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ li.tp a {
+   color: white;
+ }
+
+ li.tp a:hover {
+   text-decoration: underline;
+ }
+
+ div.centro {
+    width: 100%;
+    background-color: white;
+    display: flex;
+ }
+
+ div.img5 {
+    display: flex;
+    margin: auto;
+    margin: 60px auto 60px auto; 
+ }
+
+ div.amarelo {
+    background-color: #3B538C;
+    width: 250px;
+    display: flex;
+    margin: 0px;
+ }
+
+ div.amarelo > img#amarelo {
+    display: flex;
+    padding: 2px ;
+    margin-top: 33px;
+ }
+
+ div.amarelo > p#texto3 {
+    display: flex;
+    margin: 20px 30px 20px 5px;
+    font-size: 31px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+ }
+
+ div.amarelo > p#texto4 {
+    display: flex;
+    margin: 80px 30px 10px -115px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+ }
+
+ footer {
+    width: 100%;
+    background-color: #3B538C;
+    height: 340px; 
+    }
+
+ footer  h1 {
+    font-size: 20px;
+   }
+
+ footer h4 {
+    font-size: 16px;
+    font-weight: bold;  
+ }
+
+ footer p {
+    font-size: 16px;
+ }
+
+ div.favicon {
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: -70px;
+    height: 9%;
+ }
+
+ div.footer {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ div.cidade {
+    line-height: 40px;
+    padding: 20px;
+    justify-content: space-around;
+    margin: 1px 20px 10px 5px;
+ }
+
+ footer a {
+    text-decoration: none;
+    color: white;
+ }
+
+ footer a:hover {
+    text-decoration: underline;
+ }
+
+ footer img {
+   display: flex;
+   margin: auto;
+ }
