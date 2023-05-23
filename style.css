@@ -3,17 +3,19 @@
 * {
    margin: 0px;
    padding: 0px;
+   box-sizing: border-box;
 }
 
 body {
     background-color: white;
+    margin: auto;
 }
 
 main {
-  width: 100%;
+  width: auto;
   height: 50%;
   padding: 0px ;
-  background-image: url(imagens/represaigt.jpg);
+  background-image: url(imagens/igarata-sp.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 300px;
@@ -35,6 +37,11 @@ header > div.container {
     justify-content: center;
 }
 
+section#secundario {
+display: flex;
+flex-direction: row;
+}
+
 header > div.container > div > a.acess {
     color: white;
     padding: 5px;
@@ -44,7 +51,7 @@ header > div.container > div > a.acess {
     font-weight: normal;
 }
 
-div.logo {
+div.conteudo-primario {
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -53,7 +60,7 @@ div.logo {
     margin-right: 90px;
 }
 
- #divbusca {
+ div#busca {
     background-color: black;
     border: solid 1px black;
     border-radius:  20px;
@@ -65,7 +72,7 @@ div.logo {
     margin: 0px 10px 0px 10px ;
 }
 
- #txtbusca {
+ div#txtbusca {
     background-color: black;
     padding-left: 5px;
     font-style: italic;
@@ -73,6 +80,13 @@ div.logo {
     border: solid;
     height: 40px;
     width: 260px;
+}
+
+input[type='text'] {
+   font-size: 15px;
+   padding: 14px;
+   border: 2px solid black;
+   border-radius: 10px;
 }
 
 a {
@@ -107,7 +121,8 @@ a.redes {
    display: flex;
    align-items: center;
    flex-direction: row;
-   padding: 10px;  
+   padding: 10px; 
+   margin: 1px 5px; 
 }
 
 a.caixa {
@@ -149,7 +164,7 @@ div.submenu {
     width: 200px;
     justify-content: space-around;
     margin: auto;
-    width: 700px; 
+    width: auto; 
 }
 
 div.sub a {
