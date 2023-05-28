@@ -87,31 +87,37 @@ article.imagem {
 }
 
 div.submenu {
-    display: block;
-    width: 100vw;
-    
-}
-
-div.submenu > ul {
-    margin-top: 50px;
-    
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw; 
 }
 
 div.sub {
-   width: 100vw;
+    margin: 1px;
+   width: 100%;
+   background-color: green;
+   border: 2px solid white;
    
 }
 
-div.sub > li {
-    margin: auto;
-    border-radius: 0px;
+div.sub > a {
+    background-color: green;
+    width: 100vw;
 }
 
-div.noticias {
-    display: inline;
+div.sub >a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
 }
 
-div.teste {
-    display:inline;
+
+   div.footer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 5px;
 }
-   
