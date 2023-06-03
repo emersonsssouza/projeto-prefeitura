@@ -4,11 +4,13 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 body, html {
     background-color: white;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 header {
@@ -23,7 +25,7 @@ div.menu {
    align-items: center;
    justify-content: space-around;
    position: relative;
-   top: 0px;
+   margin: auto;
    width: 100vw;
    height: 45px;
    background-color: #3B538C;
@@ -40,6 +42,7 @@ div.menu-inicial-acessibilidade > a.menu-acessibilidade {
    font-weight: bold;
    padding: 5px 10px;
    font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
    border-radius: 5px;
    background-color: #000000;
 }
@@ -48,6 +51,11 @@ div.menu-inicial > a.menu-inicial-primario {
    color: white;
    font-weight: bold;
    padding: 5px 10px;
+   text-decoration: none;
+}
+
+div.menu-inicial > a.menu-inicial-primario:hover {
+   text-decoration: underline;
 }
 
 div.redes-sociais {
@@ -66,17 +74,26 @@ div#brasao-div {
    width: auto;
 }
 
+div#texto {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: auto;
+   text-align: left;
+}
+
 div#texto > a {
    text-decoration: none;
    font-size: 20px;
    font-weight: bold;
    font-family: Arial, Helvetica, sans-serif;
+   text-align: left;
+   color: black;
 }
 
-div#texto > a > strong {
-   font-size: 30px;
-   font-weight: bolder;
-   color: black;
+div#texto > a > span {
+   font-size: 35px;
+   font-weight: bold;
 }
 
 img#logo-img {
@@ -90,7 +107,6 @@ div#brasao-div > a#brasao-igarata {
    justify-content: space-around;
    justify-items: flex-end;
    font-size: 25px;
-
 }
 
 div#res {
@@ -100,10 +116,6 @@ div#res {
    font-size: 17px;
    font-weight: normal;
    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-div#icone-logo {
 
 }
 
@@ -163,10 +175,14 @@ div#pesquisa > span {
 
 div#diario {
    margin: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 div#diario > a {
    width: auto;
+   text-decoration: none;
    padding: 10px 20px;
    color: white;
    background-color: #3B538C;
@@ -174,15 +190,25 @@ div#diario > a {
    font-weight: bold;
    font-family: Arial, Helvetica, sans-serif;
    border-radius: 4px;
-
 }
 
 nav.opçoes {
    display: flex;
    justify-content: space-around;
    width: 80vw;
+   max-width: 80vw;
    margin: auto;
    padding: 20px;
+}
+
+a.serviços {
+   text-decoration: none;
+   font-weight: bold;
+   font-family: sans-serif;
+}
+
+a.serviços:hover {
+   text-decoration: underline;
 }
 
 section#imagem-de-fundo {
@@ -206,26 +232,28 @@ div.imagem-frente-fundo {
 
 div.menu-secundario {
    margin: auto;
+   display: flex;
+   
 }
 
 div.menu-secundario > ul {
    width: 80vw;
-   display: block;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
    position: relative;
    z-index: 1;
-   columns: 3;
    list-style-type: none;
    margin: auto;
    margin-top: 50px;
    text-align: left;
    border-radius: 10px;
-
 }
 
 div.menu-secundario > ul > li {
-  background-color: #3B538C;
-  margin-bottom: 7px;
-  border: none;
+width: auto;
+padding: 20px;
+background-color: #3B538C;
+margin: 5px;
 }
 
 div.menu-secundario > ul > li > a {
@@ -244,6 +272,7 @@ article#container-noticias > h1 {
    font-size: 30px;
    padding: 10px;
    margin: 10px 130px;
+   color: #1C3680;
 }
 
 aside.home-noticias {
@@ -256,16 +285,23 @@ aside.home-noticias {
  margin-right: auto;
  padding-left: 30px;
  padding-right: 30px;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
 }
 
 article.list-item {
    background-color: #cae9e9;
-   box-shadow: 0px 0px 5px black;
    border-bottom-right-radius: 25px;
    align-content: flex-start;
    grid-row: 10px;
    display: grid;
    margin-bottom: 30px;
+   margin: 20px;
+   height: 310px;;
+}
+
+article.list-item:hover {
+   box-shadow: 2px 2px 3px #F6F6F6;
 }
 
 div.box {
@@ -275,465 +311,213 @@ div.box {
 }
 
 div.box > img {
-   width: 180px;
+   width: 100%;
    height: 180px;
+   padding: 10px;
+   max-width: 100%;
+   object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- div#txtbusca {
-    background-color: black;
-    padding-left: 5px;
-    font-style: italic;
-    font-size: 18px;
-    border: solid;
-    height: 40px;
-    width: 260px;
+div.box > span {
+   text-align: left;
+   font-weight: bold;
+   padding: 10px;
 }
 
-input[type='text'] {
-   font-size: 15px;
-   padding: 14px;
-   border: 2px solid black;
-   border-radius: 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
-div > a#diario {
-   
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 140px;
-    background-color: #1C3680;
-    color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    align-items: center ;
-}
-
- a.igarata {
-    display: flex;
-    padding: 30px;
-    margin: -10px 200px 1px 75px;
-    flex-direction: row;
-    justify-content: left; 
-}
-
-a.redes {
+aside#grupo-turismo {
+   width: 100vw;
+   height: auto;
    display: flex;
+   margin:  20px auto;
+}
+
+aside#grupo-turismo > img#banner-vacinacao {
+   max-width: 1100px;
+   margin: auto;
+}
+
+section.turismo-banner {
+   margin: auto;
+   width: 100vw;
+   height: auto;
+   background-color: #3B538C;
+}
+
+div#imagem-turismo {
+   width: 100vw;
+   padding: 20px;
+   display: flex;
+}
+
+div#imagem-turismo > img.banner {
+   width: 1100px;
+   margin: auto;
+}
+
+div#banner-img {
+   max-width: 1000px;
+   display: flex;
+   justify-content: space-around;
    align-items: center;
-   flex-direction: row;
-   padding: 10px; 
-   margin: 1px 5px; 
+   margin: auto;
 }
 
-a.caixa {
-    color: #1C3680;
+div.banner-img {
+   max-width: 1000px;
+   padding: 10px 9px;
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   width: auto;
 }
 
-nav {
-    background-color: transparent;
-    margin: auto;
-    padding: 3px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-start;
-    justify-content: space-between;  
+div#galeria-fotos {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin-right: 200px;
+   margin-left: 200px;
 }
 
-nav.menu {
-    background-color: transparent;
-    padding: 20px;
-    margin: -10px 60px 10px 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+ button#galeria {
+   background-color: #03a64a;
+   border-color: #03a64a;
+   padding: 10px 20px;
+   text-align: center;
+   font-size: 20px;
+   color: #fff;
+   border: 1px solid #3B538C;
+   cursor: pointer;
+   text-transform: none;
+   outline: none;
+   backface-visibility: hidden;
+   overflow: visible;
+   margin: 10px 20px;
 }
 
-a.caixa {
-    color: #3B538C;
- }
-
- a:hover {
-   text-decoration: underline;
-   
+section.secretaria-video {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
 }
 
-div.submenu {
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-    margin: auto;
-    width: auto; 
-}
-
-div.sub a {
-   color: white;
-}
-
-div.sub a:hover{
-   text-decoration: underline;
-}
-
-div.sub {
-     line-height: 60px;
-     align-items: center;
-     text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 500;
-     border: 10px solid transparent; 
-        
-}
-
-div.sub > li {
-    background-color: #178b6ad0;
-    color: white;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    font-size: 20px;
-}
-
-article.imagem {
-    width: 100%;
-    background-color: transparent;
-}
-
-article > img.img {
-    display: none;  
-    padding: 10px;
-    margin: 170px auto 70px auto;
-    vertical-align: middle;
-}
-
-aside {
-    background-color: white;
-}
-
-aside > h1 {
-    text-align: left;
-    padding: 20px 10px 10px 60px;
-    margin: auto;
-    color: #3B79BC;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 33px;
-    font-weight: bolder;
-    font-weight: 800;
-}
-
-aside > h1 > strong {
-    color: #06BD89;
-}
-
- p.texto {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  text-align: center;
-  border: 1px solid black;
-  background-color: #3B538C;
-  color: white;
-  padding: 10px;
- 
-}
-
-div.teste {
-   width: 260px;
-   height: 260px;
-   text-align: justify;
-   color: black;
-}
-
-div.teste a {
-   color: black;
-}
-
-div.teste a:hover {   
-   text-decoration: none;
-}
-
-aside > div.noticias {
-    display: flex;
-    grid-template-columns: 50% 50%;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center; 
-    width: auto;
-}
-
-aside > div.noticias2 {
-    margin-top: 40px;
-    display: flex; 
-    grid-template-columns: 50% 50%;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-    width: auto;
-}
-
-aside > div.noticias :hover {
-    border: none solid 1px;
-
-}
-
-aside > div.noticias2 :hover {
-    border: none solid 1px;
-}
-
-section.turismo {
-    background-color: #3B538C ;
-}
-
-section > img.covid {
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    margin: auto;
-}
-
-section > img.banner {
-    display: flex;
-    align-items: center;
-    padding: 30px;
-    margin: auto;
-}
-
- div.banner-img {
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-
-}
-
-div.banner123 {
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
- div.foto {
-    display: flex;
-    text-align: center;
-    justify-content: right;
-    margin: 10px 180px 40px 10px;
-    
- }
-
- p#galeria {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 8px;
-    margin-bottom: 40px;
-    border-radius: 5px ;
-    background-color: #06BD89;
-    border: 1px solid transparent;
-    width: 150px;
- }
-
- p#galeria a {
-   color: white;
- }
-
- div.secretarias {
-    display: flex;
-    justify-content: space-around;   
- }
-
- div.h1 {
-    background-color: white;
-    color: #3B538C;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
- }
-
- div.h1 a {
-   color: #3B538C;
- }
-
- div.h1 a:hover {
-   color: #3B538C;
-   text-decoration: none;
- }
-
- div.secvideo {
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    margin-top: 60px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    margin: auto;
- }
-
- iframe {
-   border: 50px solid white;  
- }
-
-strong {
-    color: #06BD89;
- }
-
-ul {
-    display: block;
-    list-style-type: none;
-    columns: 2;
-    width: 800px; 
- }
-
- li {
-    line-height: 45px ;
-    border: 1px solid black;
-    padding: 10px;
- }
-
- li.tp {
-    justify-items: center;
-    text-align: center;
-    margin-left: 30px;
-    margin-right: 60px;
- }
-
- div > li.tp {
-    background-color: rgba(0, 128, 0, 0.805);
-    border: 10px solid white;
-    border-radius: 20px;
-    color: white ;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
- }
-
- li.tp a {
-   color: white;
- }
-
- li.tp a:hover {
-   text-decoration: underline;
- }
-
- div.centro {
-    width: 100%;
-    background-color: white;
-    display: flex;
- }
-
- div.img5 {
-    display: flex;
-    margin: auto;
-    margin: 60px auto 60px auto; 
- }
-
- div.amarelo {
-    background-color: #3B538C;
-    width: 250px;
-    display: flex;
-    margin: 0px;
- }
-
- div.amarelo > img#amarelo {
-    display: flex;
-    padding: 2px ;
-    margin-top: 33px;
- }
-
- div.amarelo > p#texto3 {
-    display: flex;
-    margin: 20px 30px 20px 5px;
-    font-size: 31px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
- }
-
- div.amarelo > p#texto4 {
-    display: flex;
-    margin: 80px 30px 10px -115px;
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
- }
-
- footer {
-    width: 100%;
-    background-color: #3B538C;
-    height: 340px; 
-    }
-
- footer  h1 {
-    font-size: 20px;
-   }
-
- footer h4 {
-    font-size: 16px;
-    font-weight: bold;  
- }
-
- footer p {
-    font-size: 16px;
- }
-
- div.favicon {
-    display: flex;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: -70px;
-    height: 9%;
- }
-
- div.footer {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
- }
-
- div.cidade {
-    line-height: 40px;
-    padding: 20px;
-    justify-content: space-around;
-    margin: 1px 20px 10px 5px;
- }
-
- footer a {
-    text-decoration: none;
-    color: white;
- }
-
- footer a:hover {
-    text-decoration: underline;
- }
-
- footer img {
+div#titulo-secretaria {
    display: flex;
    margin: auto;
- }
+   width: auto;
+   height: auto;
+   margin: 20px;
+}
+
+div#titulo-secretaria > h1 {
+   display: flex;
+   text-align: left;
+   font-size: 30px;
+   box-sizing: inherit;
+   color: green;
+}
+
+div.list-home {
+   display: grid;
+   gap: 10px;
+   box-sizing: inherit;
+   grid-template-columns: repeat(2, 1fr);
+   margin: 10px;
+}
+
+div.list-home > li  {
+   background-color: #03a64a;
+   list-style-type: none;
+   padding: 20px;
+}
+
+div.list-home > li > a {
+   color: white;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+div.opÇoes-secretarias-videos {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin: 10px;
+}
+
+div#titulo-video {
+   display: flex;
+   margin: auto;
+   width: auto;
+   height: auto;
+   margin: 20px;
+}
+
+div#titulo-video > h1 {
+   display: flex;
+   font-size: 30px;
+   color: green;
+   text-align: left;
+   text-align: left;
+}
+
+div#video-iframe {
+   display: flex;
+   flex-direction: row;
+   margin: auto;
+   background-color: transparent;
+}
+
+footer {
+   width: 100vw;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   background-color: #1C3680;
+   color: white;
+   padding: 10px;
+}
+
+footer > a {
+   color: white;
+}
+
+footer > div.icon-cidade {
+   width: auto;
+   height: auto;
+}
+
+footer > div.icon-cidade > img {
+   width: 200px;
+   height: 200px;
+   margin-top: 40%;
+   border-radius: 50%;
+   background-color: white;
+}
+
+div.cidade {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+}
+
+div.cidade > h1 {
+   font-size: 20px;
+}
+
+div.cidade > p , h1 , h4{
+   padding: 10px;
+}
+
+div.cidade > a {
+   color: white;
+   padding: 10px;
+   text-decoration: none;
+}
+
+div.cidade > a:hover {
+   text-decoration: underline;
+}
+
