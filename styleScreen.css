@@ -1,5 +1,5 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  div.menu-inicial-acessibilidade, div#brasao-div, div#res, div#texto, div#pesquisa, div#diario, nav.opçoes, div.menu-secundario, div.imagem-frente-fundo, aside#grupo-turismo, div#galeria-fotos{
+  div.menu-inicial-acessibilidade, div#brasao-div, div#res, div#texto, div#pesquisa, div#diario, nav.opçoes, div.menu-secundario, div.imagem-frente-fundo, aside#grupo-turismo, div#galeria-fotos, div#titulo-video{
     display: none;
   }
 
@@ -115,4 +115,18 @@ div.list-home > li {
   margin: auto;
   font-weight: bold;
   font-size: 15px;
+}
+
+iframe {
+  width: 90vw;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+div.icon-cidade {
+  margin: auto;
+}
 }
