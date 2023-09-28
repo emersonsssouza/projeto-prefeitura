@@ -100,7 +100,19 @@
   margin: auto;
  }
 
+ section.secretaria-video {
+  display: flex; 
+  flex-direction: column;
+}
 
+div.list-home {
+  display: flex;
+  flex-direction: column;
+}
 
-
+div.list-home > li {
+  width: 90vw;
+  margin: auto;
+  font-weight: bold;
+  font-size: 15px;
 }
