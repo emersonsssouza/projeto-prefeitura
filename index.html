@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="styleScreen.css" media="screen">
     <link rel="shortcut icon" href="icones/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudouTamaho()">
 <header>
   <div class="menu">
     <div class="menu-inicial-acessibilidade">
@@ -19,12 +20,51 @@
           <a class="menu-acessibilidade" href="">Acessibilidade</a>
     </div>
 
+
+
+
+
     <div id="igarata-media">
-      <i></i>
-      <img src="logo/favicon-igarata.png" alt="" width="20px">
-      <input type="text" name="" id="">
-      <i></i>
+      <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+      <menu id="itens">
+        <ul>
+          <li><a href="" id="conteudo">Conteudo </a></li>
+          <li><a href="" id="menu">Menu </a></li>
+          <li><a href="">Busca </a></li>
+          <li><a href="">Rodape</a></li>
+          <li><a href=""> Acessibilidade</a></li>
+        </ul>
+
+      </menu>
+
+      <div class="teste">
+        <img src="logo/favicon-igarata.png" alt="" width="20px" >
+        <input type="text" name="" id="">
+      </div>
+      
+      <i id="menu-sidebar" class="material-icons" onclick="clickSidebar()">menu</i>
+      <menu id="sidebar">
+        <ul>
+          <li><a href="" id="conteudo">Conteudo </a></li>
+          <li><a href="" id="menu">Menu </a></li>
+          <li><a href="">Busca </a></li>
+          <li><a href="">Rodape</a></li>
+          <li><a href=""> Acessibilidade</a></li>
+        </ul>
+
+      </menu>
+
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <div class="menu-inicial">
       <a class="menu-inicial-primario" href="#conteudo" id="conteudo">Conteudo </a>

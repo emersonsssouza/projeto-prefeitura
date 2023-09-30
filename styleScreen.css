@@ -129,4 +129,126 @@ footer {
 div.icon-cidade {
   margin: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#igarata-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: auto 20px;
+}
+
+div.teste {
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+div.teste > img {
+  width: 35px;
+}
+
+div.teste > input {
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+i#burguer {
+  width: auto;
+  margin: auto 20px;
+  background-color: none;
+  display: block;
+  cursor: pointer;
+  color: white;
+
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 0;
+}
+
+i#menu-sidebar {
+  width: auto;
+  margin: auto 20px;
+  background-color: none;
+  display: block;
+  cursor: pointer;
+  color: white;
+
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: 0;
+}
+
+
+
+
+menu#itens > ul > li > a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+menu#itens > ul {
+  width: 50vw;
+  background-color: white;
+  list-style-type: none;
+  padding: 5px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+menu#sidebar > ul > li > a  {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+menu#sidebar > ul {
+  width: 50vw;
+  background-color: white;
+  color: white;
+  list-style-type: none;
+  padding: 5px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+ul {
+  display: block;
+}
+
+
+
+
+
 }
