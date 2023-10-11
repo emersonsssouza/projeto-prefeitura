@@ -1,318 +1,436 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prefeitura de Igaratá</title>
-    <link rel="stylesheet" href="style.css" media="all">
-    <link rel="stylesheet" href="styleScreen.css" media="screen">
-    <link rel="shortcut icon" href="icones/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="icones/favicon.ico" type="image/x-icon">
+  <title>Prefeitura de Igaratá</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body onresize="mudouTamaho()">
-<header>
-  <div class="menu">
-    <div class="menu-inicial-acessibilidade">
-      <a class="menu-acessibilidade" href="">A+</a>
-        <a class="menu-acessibilidade" href="">A-</a>
-          <a class="menu-acessibilidade" href="">Acessibilidade</a>
-    </div>
 
+  <header>
+    <nav class="sidebar">
+      <ul>
+        <li><a class="sidebar-menu" href="#">A+</a></li>
+        <li><a class="sidebar-menu" href="#">A-</a></li>
+        <li><a class="sidebar-menu" href="#">Acessibilidade</a></li>
+      </ul>
+    </nav>
 
+    <nav class="sidebar">
+      <ul>
+        <li class="nav-item"><a href="#">Conteudo </a></li>
+        <li class="nav-item"><a href="#">Menu </a></li>
+        <li class="nav-item"><a href="#">Busca </a></li>
+        <li class="nav-item"><a href="#">Rodape</a></li>
+        <li class="nav-item"><a href="#">Acessibilidade</a></li>
+      </ul>
+    </nav>
 
+    <nav class="nav-bar">
+      <button class="nav-bar-conteudo" onclick="clickMenu()"><img src="icones/menu.png" alt=""></button>
+      <div class="nav-bar-conteudo"><img class="nav-bar-conteudo" src="img-mobile/igarata-mobile.png" alt=""
+          width="20px"><strong>Igaratá</strong></div>
+      <button class="nav-bar-conteudo" onclick="clickSubMenu()"><img src="icones/menu.png" alt=""></button>
+    </nav>
 
-
-    <div id="igarata-media">
-      <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
-      <menu id="itens">
+    <nav class="nav-mobile" id="nav-mobile">
+      <menu class="itens" id="itens">
         <ul>
-          <li><a href="" id="conteudo">Conteudo </a></li>
-          <li><a href="" id="menu">Menu </a></li>
-          <li><a href="">Busca </a></li>
-          <li><a href="">Rodape</a></li>
-          <li><a href=""> Acessibilidade</a></li>
+          <li class="nav-list"><a href="#">Conteudo</a></li>
+          <li class="nav-list"><a href="#">Menu</a></li>
+          <li class="nav-list"><a href="#">Busca</a></li>
+          <li class="nav-list"><a href="#">Rodape</a></li>
+          <li class="nav-list"><a href="#">Acessibilidade</a></li>
         </ul>
-
       </menu>
+    </nav>
 
-      <div class="teste">
-        <img src="logo/favicon-igarata.png" alt="" width="20px" >
-        <input type="text" name="" id="">
+    <nav class="main-list-mobile" id="main-list-mobile">
+      <!--Aqui sera colocado o menu da lista para dispositivos moveis-->
+      <menu class="menu-itens" id="menu-itens">
+        <ul>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documento-pagamento.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Nota Eletronica
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/jornal.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Diario Oficial
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/pessoa.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Portal Cidadão
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/eouve.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Ouvidoria e SIC
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/informacoes.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Portal da Transparencia
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documentos.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Decreto de Acesso a Informação
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documento-pasta.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Contratos
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/justica.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Licitações
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/trilha.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Turismo
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/ambiente-planta.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Meio Ambiente
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/educacao-lapis.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Educação
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-mobile"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/pessoas-familia.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Eleições Conselho Tutelar
+            </a></li>
+        </ul>
+      </menu>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="main-conteudo">
+
+      <img id="logo-img" src="logo/igarata 1.png">
+      </img>
+
+      <div id="res">
+        <!--Está div irá armazenar a hora atual-->
       </div>
-      
-      <i id="menu-sidebar" class="material-icons" onclick="clickSidebar()">menu</i>
-      <menu id="sidebar">
-        <ul>
-          <li><a href="" id="conteudo">Conteudo </a></li>
-          <li><a href="" id="menu">Menu </a></li>
-          <li><a href="">Busca </a></li>
-          <li><a href="">Rodape</a></li>
-          <li><a href=""> Acessibilidade</a></li>
-        </ul>
 
-      </menu>
+      <section class="main-topo">
+        <a class="logo" href="#"><img src="icones/facebook.ico"></img></a>
+        <a class="logo" href="#"><img src="icones/instagram.ico"></img></a>
+        <a class="logo" href="#"><img src="icones/youtube.ico" alt=""></img></a>
+        <a class="logo" href="#"><img src="icones/feed.ico"></img></a>
+      </section>
 
-    </div>
+      <div id="main-input">
+        <input type="search" name="" id="" placeholder="Digite a sua busca">
+      </div>
 
+      <div id="main-diario">
+        <a href="#">Diario Oficial</a>
+      </div>
 
+    </section>
 
+    <hr class="linha">
 
-
-
-
-
-
-
-
-    <div class="menu-inicial">
-      <a class="menu-inicial-primario" href="#conteudo" id="conteudo">Conteudo </a>
-        <a class="menu-inicial-primario" href="#menu" id="menu">Menu </a>
-          <a class="menu-inicial-primario" href="#divbusca">Busca </a>
-            <a class="menu-inicial-primario" href="#rodape">Rodape</a>
-              <a class="menu-inicial-primario" href="https://www.igarata.sp.gov.br/acessibilidade"> Acessibilidade</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="redes-sociais">
-  
-    <div id="brasao-div"> 
-      <a id="brasao-igarata" href=""><img id="logo-img" src="logo/favicon-igarata.png"></img><div id="texto"><a href="">Prefeitura de <br> <span>Igaratá</span></a></div></strong></a>
-    </div>
-  
-    <div id="res">
-      <!--Está div irá armazenar a hora atual-->
-      <!--A div está mostrando o resultado corretamente porem precisa ser colocado um array para mostrar o mes atual da forma correta e não na posição do objeto-->
-    </div>
-  
-  <div id="icone-logo">
-    <a class="logo" href="https://www.facebook.com/MunicipioDeIgarata"><img src="icones/facebook.ico" alt="Facebook"></img></a>
-      <a class="logo" href="https://www.instagram.com/municipiodeigarata/"><img src="icones/instagram.ico" alt="Instagram"></img></a>
-        <a class="logo" href="https://www.youtube.com/channel/UCXaz9jQWxTFeUTEgUvyBt0w/about"><img src="icones/youtube.ico" alt="Youtube"></img></a>
-          <a class="logo" href="https://ecrie20.com.br/igarata.sp.gov.br/feed.xml"><img src="icones/feed.ico" alt=""></img></a>
-  </div>
-  
-  <div id="pesquisa">
-  
-      <input type="search" name="" id="" placeholder="Digite a sua busca"><span class="material-symbols-outlined">
-        search
-        </span>
-        <a href=""></a>
-        </span>
-  </div>
-  
-  <div id="diario">
-    <a href="">Diario Oficial</a>
-  </div>
-  </div>
-  
-  <nav class="opçoes">
-    <a class="serviços" href="">O municipio</a>
+    <nav class="main-opçoes">
+      <a class="serviços" href="">O municipio</a>
       <a class="serviços" href="">Institucional</a>
-        <a class="serviços" href="">Secretarias</a>
-          <a class="serviços" href="">Downloads</a>
-            <a class="serviços" href="">Imprensa</a>
-              <a class="serviços" href="">Serviços</a>
-                <a class="serviços" href="">Transparencia</a>
-  </nav>
-  
-  <section id="imagem-de-fundo">
-     <!--Aqui será colocada a imagem de fundo background-->
-     <!--Logo dentro desta section terá uma ou 2 DIVs com a imagem secundaria e as opções-->
-    <div class="imagem-frente-fundo">
-      <!--Nesta div será colocada a imagem de boas vindas-->
-    </div>
-  
-  <div class="menu-secundario">
-    <ul>
-      <li><a href="">Nota Eletronica</a></li>
-        <li><a href="">Diario Oficial</a></li>
-          <li><a href="">Portal Cidadão</a></li>
-            <li><a href="">Ouvidoria e SIC</a></li>
-              <li><a href="">Portal da Transparencia</a></li>
-                <li><a href="">Decreto de Acesso a Informação</a</li>>
-                  <li><a href="">Contratos</a></li>
-                <li><a href="">Licitações</a></li>
-              <li><a href="">Turismo</a></li>
-            <li><a href="">Meio Ambiente</a></li>
-          <li><a href="">Educação</a></li>
-        <li><a href="">Eleições Conselho Tutelar</a></li>
-    </ul>
-    </div>
-  </section>
-  
-      <article id="container-noticias">
-        <h1>Notícias</h1>
+      <a class="serviços" href="">Secretarias</a>
+      <a class="serviços" href="">Downloads</a>
+      <a class="serviços" href="">Imprensa</a>
+      <a class="serviços" href="">Serviços</a>
+      <a class="serviços" href="">Transparencia</a>
+    </nav>
+
+    <section class="img-fundo">
+      <!--Aqui será colocada a imagem de fundo background-->
+      <!--Logo dentro desta section terá uma ou 2 DIVs com a imagem secundaria e as opções-->
+      <section class="img-front-fundo">
+
+        <!--Nesta div será colocada a imagem de boas vindas-->
+      </section>
+
+      <div class="main-home-list">
+        <ul>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documento-pagamento.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Nota Eletronica
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/jornal.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Diario Oficial
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/pessoa.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Portal Cidadão
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/eouve.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Ouvidoria e SIC
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/informacoes.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Portal da Transparencia
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documentos.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Decreto de Acesso a Informação
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/documento-pasta.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Contratos
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/justica.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Licitações
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/trilha.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Turismo
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/ambiente-planta.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Meio Ambiente
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/educacao-lapis.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Educação
+            </a></li>
+          <li><a href="">
+              <div class="icone-sistema-svg"
+                style="-webkit-mask: url(https://ecrie.com.br/Sistema/Arquitetura/Icones/pessoas-familia.svg) no-repeat;-webkit-mask-size: 32px; background-color: #fff; height: 32px; width: 32px;">
+              </div>Eleições Conselho Tutelar
+            </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <article class="home-topo-noticias">
+      <h1>Notícias</h1>
+    </article>
+
+    <div class="home-noticias">
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">03 de outubro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/praça.jpg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Praça de Eventos</h3>
+        </div>
       </article>
-      <aside class="home-noticias">
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/onibus.jpeg" alt="" title="">
-              <span>Prefeito Elzo recebe Ônibus escolar</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/caminhao.jpg" alt="">
-              <span>Igaratá recebe um caminhão <br> basculante por meio de <br>convenio</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/corrida.jpeg" alt=" ">
-              <span>Igaratá sedia a maior corrida <br> de montanhas do Brasil</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/nota.jpg" alt="">
-              <span>Igaratá alcança a maior <br> nota dos últimos anos <br> em avaliação de <br> desempenho do previne <br> Brasil</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/pavimentação.jpg" alt="">
-              <span>Pavimentação da estrada do <br> Rio do Peixe, mais um <br> avanço na infraestrutura que <br> se torna realidade</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img class="imgnot" src="noticias/piso salarial.jpg"  alt="" >
-              <span>Prefeitura de Igaratá <br> mantém o piso sálarial <br> nacional da enfermagem</span>
-            </div>
-          </article>
-        </a>
-        <a href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/totem.jpg" alt="" >
-              <span>Totem de autoatendimento <br> do PoupaTempo</span>
-            </div>
-          </article>
-        </a>
-        <a class="span" href="">
-          <article class="list-item">
-            <div class="box">
-              <img src="noticias/totem.jpg" alt="" >
-              <span>Igaratá Rodeo fest 2022</span>
-            </div>
-          </article>
-        </a>
-        </aside>
-        <!--parei aqui-->
-        <aside id="grupo-turismo">
-       <img id="banner-vacinacao" src="banner/vacinaçao.png" alt="Vacinação covid-19">
-        </aside>
-        
-        <section class="turismo-banner">
-      <div id="imagem-turismo">
-        <img class="banner" src="banner/banner-principal.jpg" alt="Turismo em Igaratá">
-      </div>
-      <div id="banner-img">
-        <div class="banner-img"><img  src="banner/banner 1.jpg" alt=""></div>
-          <div class="banner-img"><img  src="banner/banner 2.jpg" alt=""></div>
-            <div class="banner-img"><img  src="banner/banner 3.jpg" alt=""></div>
-      </div>
-      <div id="galeria-fotos">
-        <button id="galeria">Galeria de fotos</button>
-      </div>
-        </section>
 
-  
-  <section class="secretaria-video">
-  
-  <div class="opçoes-secretarias">
-    <div id="titulo-secretaria">
-      <h1>Secretarias</h1>
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">29 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/lei-paulo-gustavo.jpg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Pré-cadastro para todos os agentes culturais do município</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">22 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/titulos.jpg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Conquista: Entrega de títulos de posse para famílias igarataenses!</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">20 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/curso.png" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Curso gratuito de pintura com efeitos decorativos está com inscrições abertas</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">20 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/equoterapia.jpg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Equoterapia em ação!</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">19 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/protese.jpeg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">Igarataenses são beneficiados com programa de prótese dentária</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">15 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/refis.png" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">REFIS permite que contribuintes quitem débitos com Prefeitura com descontos de até
+            100% sobre multa e juros.</h3>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div class="list-item-info">
+          <p class="list-item-meta">13 de setembro de 2023</p>
+        </div>
+        <a href="#" class="list-item-img" tabindex="-1" aria-hidden="true">
+          <img src="noticias/campo.jpg" alt="" title="">
+        </a>
+        <div class="list-item-info">
+          <h3 class="list-item-title">As obras do campo Society da prainha não param!</h3>
+        </div>
+      </article>
+
     </div>
 
-    <div class="list-home">
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-da-educacao">EDUCAÇÃO</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-acao-social">AÇÃO SOCIAL</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-financas">FINANÇAS</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/institucional/secretaria-20212024">SECRETÁRIOS</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-da-saude">SAÚDE</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-esportes-turismos-e-lazer">ESPORTES</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-esportes-turismos-e-lazer">LAZER</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-esportes-turismos-e-lazer">TURISMO</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-interesses-juridicos">INTERRESERS JURÍDICOS</a></li>
-      <li><a href="https://www.igarata.sp.gov.br/secretarias/secretaria-de-obras">OBRAS</a></li>
-    </div>
+    <section class="home-banner">
 
-  </div>
-  
-  <div class="opçoes-secretarias-videos">
-
-    <div id="titulo-video">
-      <h1>Videos</h1>
-    </div>
-
-      <div id="video-iframe">
-        <iframe width="560" height="326" src="https://www.youtube.com/embed/MPGoFLhSoEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        
+      <div class="home-banner-principal">
+        <img src="img/banner-principal.jpg" alt="Turismo em Igaratá">
       </div>
-  </div>
-  
-  </section>
-  
-  <footer>
-    <div class="icon-cidade">
-      <img src="logo/favicon-igarata.png" width="" alt="">
-    </div>
-  
-  <div class="cidade">
-    <h1>Prefeitura Municipal de Igaratá</h1>
-      <h4>Endereço:</h4>
-        <p>Av. Benedito Rodrigues de Freitas, 330 - centro</p>
+
+      <div class="home-banner-img">
+        <div class="banner-img"><img src="img/banner1.jpg" alt=""></div>
+        <div class="banner-img"><img src="img/banner 2.jpg" alt=""></div>
+        <div class="banner-img"><img src="img/banner 3.jpg" alt=""></div>
+      </div>
+
+      <div class="btn-galeria">
+        <button><a href="">Galeria de fotos</a></button>
+      </div>
+
+    </section>
+
+    <article class="home-secretarias">
+      <div class="home-secretarias-topo">
+        <h2>Secretarias</h2>
+      </div>
+
+      <div class="list-secretaria">
+        <ul>
+          <li><a href="#">EDUCAÇÃO</a></li>
+          <li><a href="#">ESPORTE, TURISMOS E LAZER</a></li>
+          <li><a href="#">SECRETARIOS</a></li>
+          <li><a href="#">SAUDE</a></li>
+          <li><a href="#">FINANÇAS</a></li>
+          <li><a href="#">OBRAS</a></li>
+          <li><a href="#">AÇÃO SOCIAL</a></li>
+          <li><a href="#">INTERRESERS JURÍDICOS</a></li>
+          <li><a href="#">MEIO AMBIENTE</a></li>
+        </ul>
+      </div>
+
+    </article>
+
+    <section class="home-eouve">
+      <div class="home-eouve-img">
+        <img src="img/eouve-1.jpg" alt="">
+        <img src="img/eouve-2.png" alt="">
+      </div>
+    </section>
+
+    <footer>
+      <section class="footer-position">
+        <div class="icon-cidade">
+          <img src="logo/favicon-igarata.png" width="" alt="">
+        </div>
+
+        <div class="cidade">
+          <h1>Prefeitura Municipal de Igaratá</h1>
+          <h4>Endereço:</h4>
+          <p>Av. Benedito Rodrigues de Freitas, 330 - centro</p>
           <p>Igaratá/SP - CEP: 12350-000</p>
-            <h4>Telefone:</h4>
+          <h4>Telefone:</h4>
           <p>(11) 4610-0471</p>
-        <h4>Funcionamento:</h4>
-      <p>Segunda a sexta-feira, das 09h ás 17h </p>
-  </div>
-  
-  <div class="cidade">
-    <h1>Institucional</h1>
-      <a href="">A cidade</a>
-        <a href="">Secretarias</a>
-          <h1>Servidor</h1>
-            <a href="">Holerite Online</a>
-              <a href="">Webmail</a>
-  </div>
-  
-  <div class="cidade">
-      <h1>Turismo</h1>
-        <a href="">COMTUR</a>
-          <a href="">Documentos</a>
-                <a href="">Transparencia</a>
-  </div>
-  
-  <div class="cidade">
-    <h1>Canais Oficiais</h1>
-    <a href="">Facebook</a>
-     <a href="">YouTube</a>
-          <a href="">Instagram</a>
-  </div>
+          <h4>Funcionamento:</h4>
+          <p>Segunda a sexta-feira, das 09h ás 17h </p>
+        </div>
 
-  
-  
-  <script src="javascript/script.js"></script>
-  
-  </footer>
-</main>
-</body> 
+        <div class="cidade">
+          <h1>Institucional</h1>
+          <a href="">A cidade</a>
+          <a href="">Secretarias</a>
+          <h1>Servidor</h1>
+          <a href="">Holerite Online</a>
+          <a href="">Webmail</a>
+        </div>
+
+        <div class="cidade">
+          <h1>Turismo</h1>
+          <a href="">COMTUR</a>
+          <a href="">Documentos</a>
+          <a href="">Transparencia</a>
+        </div>
+
+        <div class="cidade">
+          <h1>Canais Oficiais</h1>
+          <a href="">Facebook</a>
+          <a href="">YouTube</a>
+          <a href="">Instagram</a>
+        </div>
+      </section>
+
+      
+
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
