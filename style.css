@@ -99,20 +99,59 @@ div#main-diario > a {
   background-color: blue;
 }
 
-nav.main-opçoes {
+.main-opçoes {
   display: flex;
   max-width: 80vw;
+  height: 50px;
   flex-direction: row;
-  margin: 0 auto;
   padding: 10px;
+  margin: auto;
+  flex-wrap: nowrap;
 }
 
-.main-opçoes > a {
-  display: block;
-  margin: 0 auto;
-  color: black;
+.dropdown-container {
+  width: 80vw;
+}
+
+.serviços {
+  padding: 10px;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.serviços:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  top: 10px;
+  left: -40px;
+}
+
+.dropdown-content ul {
   padding: 5px;
+  width: 180%;
+}
+
+.dropdown-content li {
+  width: auto;
+  line-height: 40px;
+  background-color: white;
+  list-style-type: none;
+  padding: 5px;
+}
+
+.dropdown-content li:hover {
+  background-color: rgb(180, 171, 171);
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: black;
 }
 
 section.img-fundo {

@@ -29,11 +29,19 @@ function clickSubMenu() {
   console.log("clicou no 2° menu");
 }
 
-function municipio() {
-  var municipio = document.getElementById("menu-municipio");
-  if(municipio.style.display === "block") {
-    municipio.style.display = "none"
-  } else {
-    municipio.style.display = "block"
-  }
-}
+// Obtenha todos os elementos com a classe 'dropdown-container'
+const dropdownContainers = document.querySelectorAll('.dropdown-container');
+
+// Adicione um evento de clique a cada elemento
+dropdownContainers.forEach(container => {
+    const dropdownContent = container.querySelector('.dropdown-content');
+
+    container.addEventListener('click', () => {
+        if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
+            dropdownContent.style.display = 'block';
+        } else {
+            dropdownContent.style.display = 'none';
+        }
+    });
+});
+
