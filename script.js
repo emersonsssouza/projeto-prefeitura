@@ -29,19 +29,25 @@ function clickSubMenu() {
   console.log("clicou no 2° menu");
 }
 
-// Obtenha todos os elementos com a classe 'dropdown-container'
-const dropdownContainers = document.querySelectorAll('.dropdown-container');
+  //Fechar menu quando clicado em outro menu (DESKTOP, GRANDES TELAS!)
+  // Selecionar todos os links do menu
+const menuLinks = document.querySelectorAll(".main-opçoes .dropdown-container a");
 
-// Adicione um evento de clique a cada elemento
-dropdownContainers.forEach(container => {
-    const dropdownContent = container.querySelector('.dropdown-content');
+  // Adicionar um evento de clique a cada link
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      // Evitar que o link redirecione para outra página
+      event.preventDefault();
 
-    container.addEventListener('click', () => {
-        if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
-            dropdownContent.style.display = 'block';
-        } else {
-            dropdownContent.style.display = 'none';
-        }
-    });
-});
+      // Fechar todos os menus
+      const allDropdowns = document.querySelectorAll(".main-opçoes .dropdown-content");
+      allDropdowns.forEach(dropdown => {
+        dropdown.style.display = "none";
+        });
+
+      // Abrir o menu associado ao link clicado
+      const dropdown = this.nextElementSibling;
+          dropdown.style.display = "block";
+      });
+  });
 

@@ -15,19 +15,18 @@
   <header>
     <nav class="sidebar">
       <ul>
-        <li><a class="sidebar-menu" href="#">A+</a></li>
-        <li><a class="sidebar-menu" href="#">A-</a></li>
-        <li><a class="sidebar-menu" href="#">Acessibilidade</a></li>
+        <li class="nav-item-sidebar"><a class="sidebar-menu" href="#">A+</a></li>
+        <li class="nav-item-sidebar"><a class="sidebar-menu" href="#">A-</a></li>
+        <li class="nav-item-sidebar"><a class="sidebar-menu" href="#">Acessibilidade</a></li>
       </ul>
     </nav>
 
     <nav class="sidebar">
       <ul>
-        <li class="nav-item"><a href="#">Conteudo </a></li>
-        <li class="nav-item"><a href="#">Menu </a></li>
-        <li class="nav-item"><a href="#">Busca </a></li>
-        <li class="nav-item"><a href="#">Rodape</a></li>
-        <li class="nav-item"><a href="#">Acessibilidade</a></li>
+        <li class="nav-item"><a href="#">Ir para o conteudo |</a></li>
+        <li class="nav-item"><a href="#">Ir para o menu |</a></li>
+        <li class="nav-item"><a href="#">Ir para a busca |</a></li>
+        <li class="nav-item"><a href="#">Ir para o rodapé</a></li>
       </ul>
     </nav>
 
@@ -48,6 +47,26 @@
           <li class="nav-list"><a href="#">Acessibilidade</a></li>
         </ul>
       </menu>
+    </nav>
+
+    <nav class="menu-tablet">
+      <button class="nav-bar-conteudo" onclick="clickMenu()"><img src="icones/menu.png" alt=""></button>
+
+      <div class="menu-img">
+        <img class="nav-bar-conteudo" src="img-mobile/igarata-mobile.png" alt="" width="20px"><strong>Igaratá</strong>
+      </div>
+
+      <div class="btn-redes">
+        <a class="logo" href="#"><img src="icones/facebook.ico"></img></a>
+        <a class="logo" href="#"><img src="icones/instagram.ico"></img></a>
+        <a class="logo" href="#"><img src="icones/youtube.ico" alt=""></img></a>
+        <a class="logo" href="#"><img src="icones/feed.ico"></img></a>
+      </div>
+
+      <input type="search" name="" id="" placeholder="Digite a sua busca">
+
+      <button class="nav-bar-conteudo" onclick="clickSubMenu()"><img src="icones/menu.png" alt=""></button>
+
     </nav>
 
     <nav class="main-list-mobile" id="main-list-mobile">
@@ -153,25 +172,25 @@
       <div class="dropdown-container">
         <a class="serviços" href="#">O municipio</a>
         <div class="dropdown-content">
-            <ul>
-              <li><a href="#">História do municipio</a></li>
-              <li><a href="#">Informações turisticas</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">História do municipio</a></li>
+            <li><a href="#">Informações turisticas</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="dropdown-container">
         <a class="serviços" href="#">Institucional</a>
         <div class="dropdown-content">
-            <ul>
-              <li><a href="#">Prefeito</a></li>
-              <li><a href="#">Gabinete</a></li>
-              <li><a href="">Galeria de prefeitros</a></li>
-              <li><a href="">Legislaturas anteriores</a></li>
-              <li><a href="">Turismo</a></li>
-              <li><a href="">Secretaria 2021/2024</a></li>
-              <li><a href="">Videos</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">Prefeito</a></li>
+            <li><a href="#">Gabinete</a></li>
+            <li><a href="">Galeria de prefeitros</a></li>
+            <li><a href="">Legislaturas anteriores</a></li>
+            <li><a href="">Turismo</a></li>
+            <li><a href="">Secretaria 2021/2024</a></li>
+            <li><a href="">Videos</a></li>
+          </ul>
         </div>
       </div>
 
@@ -214,10 +233,10 @@
       <div class="dropdown-container">
         <a class="serviços" href="#">Imprensa</a>
         <div class="dropdown-content">
-            <ul>
-              <li><a href="#">Noticias</a></li>
-            </ul>
-            
+          <ul>
+            <li><a href="#">Noticias</a></li>
+          </ul>
+
         </div>
       </div>
 
@@ -240,10 +259,10 @@
       <div class="dropdown-container">
         <a class="serviços" href="#">Transparencia</a>
         <div class="dropdown-content">
-            <ul>
-              <li><a href="#">Portal da Transparencia</a></li>
-            </ul>
-            
+          <ul>
+            <li><a href="#">Portal da Transparencia</a></li>
+          </ul>
+
         </div>
       </div>
     </nav>
@@ -513,10 +532,6 @@
           <a href="">Instagram</a>
         </div>
       </section>
-
-      
-
-    
   </main>
 
   <script src="script.js"></script>

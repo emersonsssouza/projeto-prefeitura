@@ -16,7 +16,7 @@ body {
 header {
   width: 100vw;
   height: auto;
-  background-color: black;
+  background-color: #1c3680;
   padding: 5px;
   display: flex;
   justify-content: space-around;
@@ -34,7 +34,7 @@ nav.sidebar {
 nav.sidebar a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   padding: 3px;
 }
 
@@ -42,6 +42,25 @@ nav.sidebar ul {
   display: flex;
   text-decoration: none;
   list-style-type: none;
+}
+
+nav.sidebar ul > li.nav-item-sidebar {
+  margin: 1px 5px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: #000000;
+}
+
+li.nav-item-sidebar > a.sidebar-menu {
+  font-weight: bold;
+}
+
+nav.sidebar ul > li.nav-item {
+  margin: 5px;
+}
+
+li.nav-item > a:hover {
+  text-decoration: underline;
 }
 
 .linha {
@@ -96,7 +115,7 @@ div#main-diario > a {
   font-weight: bold;
   border-radius: 5px;
   color: white;
-  background-color: blue;
+  background-color: #1c3680;
 }
 
 .main-opçoes {
@@ -165,14 +184,15 @@ section.img-fundo {
 }
 
 section.img-front-fundo {
-  width: 80vw;
+  width: auto;
+  max-width: 80vw;
   height: 350px;
   background-image: url(img/boas-vindas.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
-  margin: auto;
+  margin: 0 auto;
+
   z-index: 1;
 }
 
@@ -480,7 +500,8 @@ div.cidade > a:hover {
 
 nav.nav-bar,
 .nav-mobile,
-.main-list-mobile {
+.main-list-mobile,
+.menu-tablet {
   display: none;
 }
 
@@ -492,7 +513,8 @@ nav.nav-bar,
   #main-diario,
   nav.main-opçoes,
   .img-front-fundo,
-  div.main-home-list {
+  div.main-home-list,
+  .menu-tablet {
     display: none;
   }
 
@@ -722,5 +744,424 @@ nav.nav-bar,
 
   .cidade {
     margin: auto -50px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  nav.sidebar,
+  #logo-img,
+  #res,
+  #main-input,
+  #main-diario,
+  nav.main-opçoes,
+  .img-front-fundo,
+  div.main-home-list,
+  .menu-tablet,
+  hr {
+    display: none;
+  }
+
+  header {
+    background-color: white;
+    width: 90vw;
+    margin: auto;
+  }
+
+  .main-topo {
+    margin: auto;
+  }
+
+  nav.nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: auto;
+    width: 100vw;
+    color: white;
+  }
+
+  div.nav-bar-conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.nav-bar-conteudo img {
+    height: 50px;
+    width: 50px;
+  }
+
+  div.nav-bar-conteudo strong {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  /*1° menu abaixo*/
+
+  nav.nav-mobile ul {
+    list-style-type: none;
+    float: left;
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 90vh;
+    z-index: 1;
+  }
+
+  nav.nav-mobile a {
+    text-decoration: none;
+    color: #1c3680;
+    font-size: 20px;
+    line-height: 60px;
+    z-index: 1;
+  }
+
+  /*2° menu abaixo*/
+  nav.main-list-mobile ul {
+    list-style-type: none;
+    display: block;
+    padding: 10px;
+    margin: auto 10px;
+    background-color: #3b538c;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 70vw;
+    height: auto;
+    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 90vh;
+    z-index: 1;
+  }
+
+  .main-list-mobile a {
+    text-decoration: none;
+    color: white;
+    z-index: 1;
+  }
+
+  .icone-sistema-mobile {
+    margin: auto 20px;
+  }
+
+  menu.menu-itens > ul > li > a {
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+  }
+  /*Fim do 2° menu*/
+
+  section.img-fundo {
+    width: 100vw;
+    height: 120px;
+    background-image: url(img/boas-vindas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home-topo-noticias {
+    padding: 10px;
+    margin: auto;
+    width: 90vw;
+  }
+
+  .home-topo-noticias h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 35px;
+  }
+
+  div.home-noticias {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 10px auto;
+    z-index: 0;
+  }
+
+  a.list-item-img img {
+    width: 100vw;
+  }
+
+  section.home-banner,
+  .home-banner-img {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .home-banner-principal,
+  .home-banner-img,
+  .home-banner-principal img,
+  .btn-galeria {
+    width: 90vw;
+    margin: 2px auto;
+  }
+
+  .banner-img {
+    width: 90vw;
+    margin: 3px auto 1px auto;
+  }
+
+  .btn-galeria button {
+    margin: 10px 5px;
+  }
+
+  article.home-secretarias {
+    width: 100vw;
+    margin: auto;
+  }
+
+  .home-secretarias-topo {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .home-secretarias-topo h2 {
+    font-size: 35px;
+  }
+
+  .list-secretaria {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .list-secretaria ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 10px;
+  }
+
+  section.home-eouve {
+    width: 100vw;
+    display: block;
+    margin: -30px auto;
+  }
+
+  .home-eouve-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-eouve-img img {
+    width: 90vw;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-position {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: auto;
+  }
+
+  .icon-cidade {
+    width: 100vw;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-cidade img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cidade {
+    margin: auto -50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav.sidebar,
+  #res,
+  #logo-img,
+  #main-diario,
+  nav.main-opçoes,
+  .main-topo,
+  #main-input,
+  div.main-home-list,
+  hr {
+    display: none;
+  }
+
+  header {
+    width: 100vw;
+    height: 50px;
+    background-color: white;
+  }
+
+  .menu-tablet {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-tablet > button.nav-bar-conteudo {
+    background-color: white;
+    border: none;
+  }
+
+  div.menu-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-tablet > div.menu-img > img {
+    width: 30px;
+  }
+
+  .menu-tablet > div.menu-img > strong {
+    color: black;
+    margin: 0px 2px;
+    font-weight: bold;
+  }
+
+  .menu-tablet > div.btn-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-tablet > div.btn-redes > a img {
+    width: 30px;
+    margin: 0px 10px;
+  }
+
+  .menu-tablet > input[type="search"] {
+    height: 30px;
+    border: 2px solid #1c3680;
+    border-radius: 5px;
+  }
+
+  nav.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    position: absolute;
+    height: auto;
+    top: 50px;
+    left: 10px;
+    background-color: white;
+  }
+
+  nav.nav-mobile > menu.itens > ul > li {
+    padding: 10px;
+  }
+
+  nav.nav-mobile > menu.itens > ul > li > a {
+    text-decoration: none;
+  }
+
+  nav.main-list-mobile ul {
+    list-style-type: none;
+    display: block;
+    padding: 15px;
+    margin: auto 10px;
+    background-color: #3b538c;
+    position: absolute;
+    top: 7%;
+    right: 0;
+    width: 50vw;
+    height: auto;
+    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 90vh;
+    z-index: 1;
+  }
+
+  .main-list-mobile a {
+    text-decoration: none;
+    color: white;
+    z-index: 1;
+  }
+
+  .icone-sistema-mobile {
+    margin: auto 20px;
+  }
+
+  menu.menu-itens > ul > li > a {
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+  }
+
+  section.img-fundo {
+    background-image: url(img/boas-vindas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-front-fundo {
+    background-color: transparent;
+  }
+
+  .home-topo-noticias {
+    margin: 0px;
+    padding: 10px 15px;
+  }
+
+  .home-topo-noticias h1 {
+    font-size: 45px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .home-noticias {
+    display: block;
+    width: 100vw;
+  }
+  .list-item {
+    margin-bottom: 50px;
+  }
+  .list-item img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .home-eouve-img {
+    display: block;
+  }
+
+  .home-eouve-img img {
+    width: 100%;
+  }
+
+  .list-secretaria ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
