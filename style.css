@@ -192,40 +192,43 @@ section.img-front-fundo {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-
   z-index: 1;
 }
 
 div.main-home-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 80vw;
   margin: auto;
+  background-color: transparent;
 }
 
 div.main-home-list ul {
-  width: 80vw;
+  width: 100vw;
+  background-color: transparent;
+  max-width: 80vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   margin: 10px auto;
 }
 
 div.main-home-list li {
+  width: 25vw;
   list-style-type: none;
   display: grid;
-  min-height: 70px;
-  min-width: 350px;
   margin: auto;
 }
 
 .icone-sistema-svg {
-  margin: auto 20px;
+  margin: auto 50px;
 }
 
 div.main-home-list a {
   display: flex;
-  background-color: #1c3680;
+  justify-content: flex-start;
+  background-color: #3b538c;
   color: white;
   font-weight: bold;
   text-decoration: none;
